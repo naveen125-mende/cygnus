@@ -1,0 +1,33 @@
+<body class="flex-col-gap">
+    <div class="main-container">
+        <h1>About Cygnus Water Solutions</h1>
+        <p>Home > About Us</p>
+    </div> 
+    <div class="container">
+        <div class="grid-4">
+            <div class="card flex-column g-2 align-items-center text-center" *ngFor="let item of cards_data">
+                <img src="assets/about-icon.svg" alt="" > 
+                <h6 class="thirdcol-small-heading">{{item.title}}</h6>
+                <p class="paracol-para-heading">{{item.desc}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="about-us-container">
+        <div class="grid-2">  
+            <div class="flexcolumnjstcn-center ">
+                <h5 class="thirdcol-secondary-heading">Our Journey and Expertise</h5>
+                <p class="paracol-para-heading">Founded in 2012, Cygnus has grown from a small water treatment startup to a leading provider of comprehensive water solutions. Our team of engineers, technicians, and water quality experts work tirelessly to develop innovative technologies.</p>
+                <ul class="flex-column g-2">
+                    <li>10+ Years of Industry Experience</li>
+                    <li> Serving 500+ Residential and Industrial Clients</li>
+                    <li>ISO 9001:2015 Certified</li>
+                </ul>
+                <button mat-raised-button routerLink="products" class="primary-button ">Contact Our Experts</button>
+            </div>
+            <div class="light-blue-card  flex-center">
+                <img src="assets/product-5.svg" alt="">
+            </div>
+        </div>
+    </div>
+    
+</body>

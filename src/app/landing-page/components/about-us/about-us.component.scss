@@ -1,0 +1,14 @@
+@use '../../../../partial-scss/variables' as *;
+@use '../../../../styles.scss';
+
+.about-us-container{
+    background-color: $light-white;
+    padding: 2rem;
+}
+
+ul{
+    li{
+        @extend .paracol-para-heading;
+        margin-left: 1rem;
+    }
+}

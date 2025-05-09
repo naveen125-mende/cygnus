@@ -1,0 +1,7 @@
+@use '../../../../partial-scss/variables' as *;
+@use '../../../../styles.scss';
+
+.footer-container{
+    background-color: $primary-color;
+    padding: 2rem;
+}

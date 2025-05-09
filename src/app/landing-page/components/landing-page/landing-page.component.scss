@@ -1,0 +1,7 @@
+@use '../../../../partial-scss/variables' as *;
+@use '../../../../styles.scss';
+
+ .content{
+    min-height: 100vh;
+    padding-top: 5rem;
+ }

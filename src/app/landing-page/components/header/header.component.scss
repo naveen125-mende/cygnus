@@ -1,0 +1,45 @@
+@use '../../../../partial-scss/variables' as *;
+@use '../../../../styles.scss';
+
+header{
+    height: 5rem;
+    position: fixed;
+    background-color: $light-white;
+    top: 0;
+    z-index: 1;
+    width: 100vw;
+}
+
+.header-container{
+    padding: 0.5rem 1rem;
+}
+
+.logo{
+    height: $hundred-percent;
+
+}
+
+
+ul{
+    li{
+       @extend .black-para-heading;
+       cursor: pointer;
+    }
+}
+.active-link {
+    color: $highlight-color !important;
+    font-weight: bold !important;
+  }
+
+
+.primary-button{
+    a{
+        color: $white-color;
+    }
+    &:hover{
+        a{
+            color: $primary-color !important;
+        }
+    }
+}
+

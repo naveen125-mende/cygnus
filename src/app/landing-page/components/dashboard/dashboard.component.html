@@ -1,0 +1,113 @@
+<body>
+    <div class="hero-container">
+        <img src="../../../../assets/hero-section-bg.svg" alt="hero-image" />
+        <div class="hero-header text-center">
+            <h1>Pure Water for a Healthy Life</h1>
+            <p>Providing advanced water purification solutions for home and business</p>
+        </div>
+    </div>
+    <div class="hero-second-container ">
+        <div class="grid-3-1">
+            <div class="flex-column g-4">
+                <h3 class="secondary-heading ">Welcome to Cygnus Aqua Technologies </h3>
+                <div class="transparent-card">
+                    <h5 class="pb-3 thirdcol-secondary-heading">No. 1 in Alkaline water</h5>
+                    <p class="paracol-para-heading">Cygnus Aqua Technologies, established in 2020 and based in Hyderabad, Telangana, is a leading provider of water purification and treatment solutions. We specialize in manufacturing advanced RO plants, supplying high-performance alkaline water systems and water softeners, and delivering expert maintenance services.
+                        Focused on innovation and reliability, we offer customized solutions for commercial and industrial clients—ensuring clean, healthy, and safe water with every system.</p>
+                </div>
+            </div>
+            <div class="girl-image-container">
+                <img src="../../../../assets/girl-image.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h3 class="secondary-heading text-center pb-4">Our Products </h3>
+        <div class="grid-4">
+            <div class="product-card flex col-gap" *ngFor="let item of products_details">
+                <div class="product-image-container">
+                    <img src="{{item.img}}" alt="">
+                </div>
+                <div class="flexcolumn-spacebtwn">
+                    <h6 >{{item.name}}</h6>
+                    <button mat-raised-button routerLink="products">View All</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h3 class="secondary-heading text-center pb-4">Our 5 Wings of Water Solutions</h3>
+        <div class="flex-col-gap">
+            <div class="first-grid w-100" [ngClass]="{ 'flex-reverse': item.id % 2 === 0 }"  *ngFor="let item of five_wings_solutions">
+                <div class="light-blue-card  flex-center w-100">
+                    <img src="{{item.img}}" alt="">
+                </div>
+                <div class="flexcolumnjstcn-center w-100">
+                    <h5 class="thirdcol-secondary-heading">{{item.title}}</h5>
+                    <p class="paracol-para-heading">{{item.desc}}</p>
+                    <button mat-raised-button routerLink="products" class="primary-button w-25">View All</button>
+                </div>
+            </div>            
+        </div>     
+    </div>
+    <div class="third-container">
+        <div class="flex-column text-center">
+            <h5 class="thirdcol-secondary-heading pb-1">Why Choose Us</h5>
+            <h3 class="secondary-heading pb-4">Six Reasons For People Choosing Us</h3>
+        </div>
+        <div class="grid-3">
+            <div class="card flex-column g-2 align-items-center text-center" *ngFor="let item of six_reason_cards">
+                <img src="{{item.img}}" alt="">
+                <h6 class="thirdcol-small-heading">{{item.title}}</h6>
+                <p class="paracol-para-heading">{{item.desc}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="fourth-container">
+        <div class="flex-column justify-content-center text-center">
+            <h5 class="white-sub-heading pb-1">Don't Know What To Start With?</h5>
+            <h3 class="white-main-heading pb-4">Get in Touch with Bangalore Aqua</h3>
+        </div>
+    </div>
+    <div class="send-message-container ">
+        <div class="grid-2 ">
+            <div class="flex-column justify-content-center g-4">
+                <div class="flex-column g-2">
+                    <h6 class="thirdcol-para-heading">Offices</h6>
+                    <h4 class="secondary-sub-heading ">NO.1 Alkaline water</h4>
+                    <p class="paracol-para-heading">Cygnus Aqua Technologies, we are committed to providing our valued customers with exceptional water purification solutions and personalized support. If you have any inquiries, feedback, or would like todiscuss your specific requirements, we encourage you toreach out to our dedicated team.</p>
+                </div>
+                <div class="flex-col-gap">
+                    <p class="paracol-para-heading">Phone: +91 99511 16106</p>
+                    <p class="paracol-para-heading">Email: info&#64;Cygnus.com</p>
+                    <p class="paracol-para-heading">Address: Reliance Smart Opposite, Kanteshwar bypass, Nizamabad</p>
+                </div>
+            </div>
+            <div class="send-message-card">
+                <div class="flex-column g-4">
+                    <div class="flex-column g-2">
+                        <h6 class="thirdcol-para-heading">Free Consultation</h6>
+                        <h4 class="secondary-sub-heading ">Get A Free Quote</h4>
+                    </div>
+                    <form class="w-100">                          
+                        <mat-form-field appearance="outline" class="w-100">
+                            <input matInput placeholder="Enter your full name"   type="text"   class="w-100">
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" class="w-100">
+                            <input matInput placeholder="Phone " type="tel" class="w-100">
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" class="w-100">
+                            <input matInput placeholder="Enter Your Email Address" type="email"  class="w-100">
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" class="w-100">
+                            <textarea matInput placeholder="Service Description" rows="2"></textarea>
+                        </mat-form-field>
+                        <mat-card-footer>
+                            <button type="submit" mat-flat-button class="primary-button">SEND MESSAGE</button>
+                        </mat-card-footer>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

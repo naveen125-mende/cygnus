@@ -1,0 +1,120 @@
+@use '../../../../partial-scss/variables' as *;
+@use '../../../../styles.scss';
+
+
+.hero-container{
+    position: relative;
+    display: inline-block;
+    min-height: 50vh;
+    width: $hundred-percent;
+    img{
+        display: block;
+        height:$hundred-percent ;
+        width: $hundred-percent;
+        object-fit: cover;
+        object-position: center;
+        
+    }
+    // @include responsive(lg){
+    //     img{
+    //         height: 00px;
+    //     }
+    // }
+}
+.hero-header{
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: fit-content; /* or a fixed width */
+    // @include responsive(lg){
+    //     top: 1rem;
+
+    // }
+    h1{
+        @include text(3rem,600,$white-color);
+        text-align: center;
+        padding-bottom: 0.5rem;
+        @include responsive(lg){
+            font-size: 2rem;
+        };
+        @include responsive(md){
+            font-size: 1.5rem;
+        }
+    }
+      
+    
+    p{
+        @include text(1.5rem,400,$white-color);
+        @include responsive(lg){
+            font-size: 1rem;
+        }
+    }
+}
+.hero-second-container{
+    background-image: url('../../../../assets/second-hero-image.svg');
+    max-width: $hundred-percent;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 2rem 1rem 0;
+}
+
+.transparent-card{
+    background-color: rgba(246, 246, 246, 0.796); 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+}
+.girl-image-container{
+    display: flex;
+    align-items: end;
+    img{
+        width: $hundred-percent;
+    }
+}
+
+.third-container{
+    background-image: url('../../../../assets/third-img-bg.svg');
+    max-width: $hundred-percent;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 2rem 1rem;
+}
+.fourth-container{
+    background-image: url('../../../../assets/fourth-img-bg.jpg');
+    max-width: $hundred-percent;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 2rem 1rem ;
+
+}
+
+.send-message-container{
+    padding: 1rem 3rem;
+    @include responsive(lg){
+        padding: 1rem ;
+    }
+}
+
+.send-message-card{
+    @include card($white-color, 1px solid #4B4F58, 0, 2rem);
+    box-shadow: 0px 1px 2px 0px $primary-shadow-color;
+}
+
+.first-grid{
+    @include displayflex(row,center,1rem);
+    
+}
+.flex-reverse{
+    flex-direction: row-reverse;
+}
+
+@include responsive(md){
+    .first-grid{
+        flex-direction: column;
+    }
+
+}

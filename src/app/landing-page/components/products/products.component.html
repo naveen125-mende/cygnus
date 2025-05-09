@@ -1,0 +1,19 @@
+<body class="flex-col-gap">
+    <div class="main-container">
+        <h1>Our Products</h1>
+        <p>Home > Our Products</p>
+    </div> 
+    <div class="container">
+        <div class="grid-4">
+            <div class="product-card flex col-gap" *ngFor="let item of products_details">
+                <div class="product-image-container">
+                    <img src="{{item.img}}" alt="">
+                </div>
+                <div class="flexcolumn-spacebtwn">
+                    <h6 >{{item.name}}</h6>
+                    <button mat-raised-button routerLink="/products/products-list">View All</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,104 @@
+@use 'sass:map';
+
+$primary-color: #123B89;
+$third-color:#0A9CE0;
+$light-white:#F5F5F5;
+$transparent-color:#F6F6F6;
+$primary-button-color:#3b66b4;
+$secondary-button-color:hsl(28, 91%, 54%);
+$red-color:#dc3545 ;
+$color-yellow:#FACC15;
+$gold-color:#F9AB00;
+$black-color:#000000;
+$blue-color:#BAE6FD;
+$dark-blue-color:#1d4ed8;
+$light-blue-color:#B0CEE6;
+$light-yellow-color:#F9AB0026;
+$light-green:#DCFCE7;
+$secondary-color:#3A416F;
+$highlight-color:#F5821F;
+$light-color:#d6e0ea;
+$border-color:#e2e8f0;
+$icon-bgcolor:#0D45691A;
+$hover-bgcolor:#F5821F80;
+$secondary-cardbg:#F8F8FD;
+$para-color:#4B5563;
+$green-color:#166534;
+$secondary-para:#6b7280;
+$primary-shadow-color:#0000001A;
+$secondary-shadow-color:#00000040;
+$white-color:#ffffff;
+$fontsizes:("xs":12px,"sm":1rem,"md":1.5rem,"lg":2rem);
+$fontweights:("xs":400,"sm":500,"md":600,"lg":700);
+$hundred-percent:100%;
+$fifty-percent:50%;
+$background-color:#e5e7eb;
+
+$breakpoints: (
+"xs": "0px",
+"sm": "480px",
+"md": "768px",
+"lg": "980px",
+"xl": "1200px"
+);
+
+
+
+@mixin responsive($breakpoint) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    @media (max-width: map.get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint #{$breakpoint} not found in map.";
+  }
+}
+
+@mixin displayflex($direction,$alignitems,$gap){
+    display: flex;
+    flex-direction: $direction;
+    align-items: $alignitems;
+    gap:$gap;
+}
+
+@mixin displaygrid($columns,$gap){
+    display: grid;
+    grid-template-columns: $columns;
+    grid-gap:$gap ;
+}
+
+@mixin grid($min,$gap){
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min($min, 100%), 1fr));
+  gap: $gap;
+}
+
+@mixin text($size,$weight,$color){
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+
+@mixin button($bgcr,$cr,$p,$br,$brr){
+    background-color: $bgcr ;
+    color: $cr;
+    padding: $p;
+    border: $br;
+    border-radius: $brr;
+}
+
+@mixin card($color,$br,$brr,$pd){
+  background-color: $color;
+  border:$br;
+  border-radius: $brr;
+  padding: $pd;
+}
+
+@mixin iconcontainer($height,$width,$bg,$brr,$dr,$ali,$gap,$jscnt){
+    height: $height;
+    width: $width;
+    background-color: $bg;
+    border-radius: $brr;
+    @include displayflex($dr,$ali,$gap);
+    justify-content: $jscnt;
+}
