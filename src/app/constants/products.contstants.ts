@@ -45,6 +45,5 @@ export class ProductsData{
         {id:'7',img:'assets/product-4.svg',name:"DIVINE RO UV UF Alkaline Water Purifier",price:" ₹ 12,999"},
         {id:'8',img:'assets/product-4.svg',name:"DIVINE RO UV UF Alkaline Water Purifier",price:" ₹ 12,999"},   
     ],
-
 }
 }
