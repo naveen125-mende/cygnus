@@ -119,6 +119,10 @@ a{
   justify-content: space-between;
 }
 
+.fifth-primaryheading{
+   @include text(1rem, 500, $primary-color)
+}
+
 .thirdcol-secondary-heading {
   @include text(1.5rem, 500,$third-color);
 }
