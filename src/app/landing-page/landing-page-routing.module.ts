@@ -35,7 +35,8 @@ const routes: Routes = [
         { path: 'products-list', component: ProductsListComponent },
         { path: 'product-details', component: ProductDetailsComponent }
       ]
-    }
+    },
+    { path: '**', redirectTo: '', pathMatch: 'full' }
   ] 
 },
 ];
