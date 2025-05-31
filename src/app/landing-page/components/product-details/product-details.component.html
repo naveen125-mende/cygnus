@@ -1,1 +1,62 @@
-<p>product-details works!</p>
+<body class="flex-col-gap">
+    <div class="container ">
+        <p class="secondary-para pb-3"> <span routerLink="">Home</span> > <span routerLink="../">Our Products</span> > <span routerLink="../products-list">Domestic Water Purifier</span> > <span class="fifth-primaryheading">DIVINE – RO UV UF Alkaline Water Purifier</span></p>
+        <div class="grid-2 mb-5">
+            <div class="image-grid">
+                <div class="flexcolumn-spacebtwn h-100">
+                    <div class="small-product-image flex-center cursor-pointer" *ngFor="let image of images" (mouseenter)="selectImage(image)">
+                        <img [src]="image" alt="">
+                    </div>
+                </div>
+                <div class="select-image flex-center">
+                    <img [src]="selectedImage" alt="">
+                </div>
+            </div>
+            <div class="flex-col-gap pe-5">
+                <h2 class="black-heading">DIVINE – RO UV UF Alkaline Water Purifier</h2>
+                <ul class="ms-5">
+                    <li class="secondary-para-sub-heading">LED Display</li>
+                    <li class="secondary-para-sub-heading">LED Display</li>
+                    <li class="secondary-para-sub-heading">LED Display</li>
+                    <li class="secondary-para-sub-heading">LED Display</li>
+                    <li class="secondary-para-sub-heading">LED Display</li>
+                </ul>
+                <div>
+                    <h6 class="black-small-heading">₹ 16,500/-</h6>
+                    <p class="secondary-small-para">M.R.P: <span class="line-through">₹ 19500/-</span> </p>
+                </div>
+                <button mat-raised-button class="primary-button">Schedule Free Water Consultation -></button>
+            </div>
+        </div>
+        <mat-tab-group>
+            <mat-tab label="Product Details"> 
+                <div class="grid-2 mt-3">
+                    <div class="flex-col-gap">
+                        <h2 class="black-heading">The Saltless Solution for Better Water</h2>
+                        <div>
+                            <div class="top-border flexrow-spacebtwn">
+                                <h6 class="black-small-heading">Selective Filtering</h6>
+                                 <p class="secondary-para">Minerals remain in your water, but the system reduces the damage their buildup can cause.</p>
+                            </div>
+                            <div class="top-border flexrow-spacebtwn">
+                                <h6 class="black-small-heading">Selective Filtering</h6>
+                                 <p class="secondary-para">Minerals remain in your water, but the system reduces the damage their buildup can cause.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-center">
+                        <div class="product-image flex-center">
+                            <img src="assets/product-1.svg" alt="" >
+                        </div>
+                    </div>
+                   
+                </div>
+            </mat-tab>
+            <mat-tab label="Installation & Maintenance">
+
+            </mat-tab>
+        </mat-tab-group>
+        
+    </div>
+    
+</body>

@@ -1,0 +1,33 @@
+@use '../../../../partial-scss/variables' as *;
+@use '../../../../styles.scss';
+
+.contact-card{
+    border: 2px solid $black-color;
+    padding: 2rem 1rem;
+}
+.highlight-border{
+    background-color: $highlight-color;
+    height: 2px;
+    width: 50px;
+    border: none;
+    margin-bottom: 1rem;
+}
+.black-border{
+    background-color: $black-color;
+    height: 2px;
+    width: 80px;
+    border: none;
+}
+
+.circle{
+    border: 1px solid $black-color;
+    border-radius: $fifty-percent;
+    padding: 1rem;
+    height: 15px;
+    width: 15px;
+    @extend .flex-center;
+}
+
+form{
+    max-width: 700px;
+}

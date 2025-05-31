@@ -7,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-
+ menuOpen = false;
+  toggleMenu() :void{
+    this.menuOpen = !this.menuOpen;
+  }
+  
+  closeMenu(): void {
+    this.menuOpen = false;
+  }
 }

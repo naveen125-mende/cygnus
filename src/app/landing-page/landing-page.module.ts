@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { LandingPageRoutingModule } from './landing-page-routing.module';
 import { MaterialComponentsModule } from '../app-angular-material.module';
 import { HeaderComponent } from './components/header/header.component';
@@ -14,6 +13,7 @@ import { ProductsListComponent } from './components/products-list/products-list.
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { MatIconModule } from '@angular/material/icon';
+import { BlogDetailsComponent } from './components/blog-details/blog-details.component';
 
 
 
@@ -29,11 +29,12 @@ import { MatIconModule } from '@angular/material/icon';
     ProductsComponent,
     ProductsListComponent,
     ProductDetailsComponent,
+    BlogDetailsComponent,
   ],
   imports: [
     CommonModule,
     LandingPageRoutingModule,
-    MaterialComponentsModule
+    MaterialComponentsModule,
   ]
 })
 export class LandingPageModule { }

@@ -1,18 +1,19 @@
 <body class="flex-col-gap">
     <div class="main-container">
         <h1>Domestic Water Purifier</h1>
-        <p>Home > Our Products > Domestic Water Purifier</p>
+        <p><span routerLink="../../">Home ></span> <span routerLink="../"> Our Products ></span> <span class="text-highlight">Domestic Water Purifier</span></p>
     </div> 
     <div class="container">
         <div class="grid-4">
-            <div class="product-card flex col-gap" *ngFor="let item of products">
+            <div class="product-card flex col-gap" *ngFor="let item of productsList">
                 <div class="product-image-container">
-                    <img src="assets/product-1.svg" alt="">
+                    <img src="{{item.img}}" alt="">
                 </div>
                 <div class="flexcolumn-spacebtwn">
                     <h6 >{{item.name}}</h6>
-                    <p class="paracol-para-heading">₹14999</p>
+                    <p class="paracol-para-heading">{{item.price}}</p>
                 </div>
+                <button mat-raised-button class="primary-border-button" (click)="selectProduct(item.id)">View Details</button>
             </div>
         </div>
     </div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-blogs',
@@ -7,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './blogs.component.scss'
 })
 export class BlogsComponent {
+
+  constructor(private router : Router){}
+
+  selectBlog(){
+    this.router.navigate(['/blogs/blog-details'])
+  }
 
 }

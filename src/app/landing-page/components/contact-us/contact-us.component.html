@@ -1,1 +1,59 @@
-<p>contact-us works!</p>
+<body class="flex-col-gap">
+    <div class="main-container">
+        <h1>Contact Us</h1>
+        <p><span routerLink="../">Home ></span> <span routerLink="../contact-us" class="text-highlight"> Contact us </span></p>
+    </div> 
+    <div class="container flex-column g-5">
+        <div class="grid-2">
+            <div class="contact-card flex-column g-2">
+                <p class="secondary-para">Cygnus</p>
+                <h5 class="third-black-heading pb-3">Get In Touch !</h5>
+                <hr class="highlight-border">
+                <p class="black-para pb-3">Reliance Smart Opposite, Kanteshwar bypass, Nizamabad</p>
+                <div class="flex-column mb-3">
+                    <p class="black-para ">Email: info&#64;cygnus.com</p>
+                    <p class="black-para pb-3">Ph: +91-9866139900</p>
+                    <p class="black-para pb-3">Customer Service: +91-99511 16106</p>
+                </div>
+                <div class="flex-column g-2 mb-3">
+                    <h6 class="text-blue fs-7 ">FOLLOW US</h6>
+                    <hr class="black-border">
+                </div>
+                <div class="d-flex g-3 ">
+                    <div class="circle">
+                        <img src="assets/contact-insta-icon.svg" alt="">
+                    </div>
+                    <div class="circle">
+                        <img src="assets/contact-fb-icon.svg" alt="">
+                    </div>
+                    <div class="circle">
+                        <img src="assets/contact-youtube-icon.svg" alt="">
+                    </div>
+                </div>
+            </div>
+             <div class="card">
+
+            </div>
+        </div>
+        <div class="flex-col-center">
+            <h5 class="third-black-heading pb-3">Have an question ? Contact us !</h5>
+            <form class="w-100">                          
+                <mat-form-field appearance="outline" class="w-100">
+                    <input matInput  placeholder="Enter your full name"   type="text"   class="w-100">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100">
+                    <input matInput  placeholder="Enter Your Email Address" type="email"  class="w-100">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100">
+                    <input matInput placeholder="Phone " type="tel" class="w-100">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100">
+                    <textarea matInput type="text" placeholder="Service Description" rows="2"></textarea>
+                </mat-form-field>
+                <mat-card-footer>
+                    <button type="submit" mat-flat-button class="primary-button w-100">SEND MESSAGE</button>
+                </mat-card-footer>
+            </form>
+        </div>
+    </div>
+ </body>

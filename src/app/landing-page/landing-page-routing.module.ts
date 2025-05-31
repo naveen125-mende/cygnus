@@ -8,6 +8,7 @@ import { ProductsListComponent } from './components/products-list/products-list.
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { BlogsComponent } from './components/blogs/blogs.component';
+import { BlogDetailsComponent } from './components/blog-details/blog-details.component';
 
 const routes: Routes = [
   { path: '', component:LandingPageComponent, children: [
@@ -21,7 +22,11 @@ const routes: Routes = [
       path:'contact-us',component:ContactUsComponent
     },
     {
-      path:'blogs',component:BlogsComponent
+      path:'blogs',
+      children:[
+        {path :'', component:BlogsComponent},
+        {path : 'blog-details', component: BlogDetailsComponent}
+      ]
     },
     {
       path:'products',

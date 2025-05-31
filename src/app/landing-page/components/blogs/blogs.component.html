@@ -1,1 +1,25 @@
-<p>blogs works!</p>
+<body class="flex-col-gap">
+    <div class="main-container">
+        <h1> Posts</h1>
+        <p><span routerLink="">Home</span> > <span class="text-highlight">Blog</span> </p>
+    </div> 
+    <div class="container">
+        <div class="grid-3">
+            <div class="blog-card cursor-pointer" (click)="selectBlog()">
+                <img src="assets/product-1.svg" alt="" class="w-100">
+                <div class="blog-card-content">
+                    <div class="blog-content text-center">
+                        <p class="fourth-primaryheading pb-1">Himajal Blogs</p>
+                        <h6 class="black-small-heading">Himajal Water Softeners – Protecting Poultry Health Through Advanced Water Treatment for Poultry Farms in Telangana 0 Comments</h6>
+                    </div>
+                    <div class="blog-content text-center">
+                        <p class="secondary-para pb-3">Fluctuating water quality is a major concern for poultry health and...</p>
+                        <div class="read-more">
+                            <h6 class="black-small-heading">Read More ></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

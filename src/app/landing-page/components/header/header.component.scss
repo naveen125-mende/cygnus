@@ -6,24 +6,45 @@ header{
     position: fixed;
     background-color: $light-white;
     top: 0;
-    z-index: 1;
+    z-index: 2;
     width: 100vw;
 }
 
 .header-container{
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 2rem;
 }
 
 .logo{
     height: $hundred-percent;
 
 }
+.nav-content {
+    @include displayflex(row, center, 1rem);
+    justify-content: space-between;
+}
 
+.nav-links,.button-links{
+    @include displayflex(row, center, 1rem);
+    list-style: none;
+}
+.call-icon{
+    height: 30px;
+    width:30px;
+}
+
+.call-card{
+    @include card($white-color, 1px solid $border-color, 5px, 8px);
+  box-shadow: 0px 1px 2px 0px $primary-shadow-color;
+}
 
 ul{
     li{
        @extend .black-para-heading;
        cursor: pointer;
+       a{
+        @extend .black-para-heading;
+        display: none;
+       }
     }
 }
 .active-link {
@@ -43,3 +64,77 @@ ul{
     }
 }
 
+a{
+    text-decoration: none
+}
+
+nav-items{
+    @include displayflex(row, center, 2rem);
+}
+
+.mobile-button-links{
+    display: none;
+}
+
+.menu-icon{
+    display: none;
+}
+
+@include responsive(lg){
+    .call-card{
+        display: none;
+    }
+    .menu-icon{
+        font-size: 2rem;
+        cursor: pointer;
+        display: block;
+    }
+    .logo-container{
+        flex-grow: 1;
+    }
+    .button-links{
+        display: none;
+    }
+    .nav-content {
+        display: none;
+        flex-direction: column;
+        width: 100%;  
+       
+    }
+    .nav-links,.mobile-button-links{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        li{
+            a{
+                display: flex;
+            }
+        }
+    }
+    .menu-open{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        position: absolute;
+        top: 5rem;
+        left: 0;
+        width: 100%;
+        background-color: $light-white;
+        padding: 1rem 0rem;
+        transition: max-height 0.4s ease, opacity 0.4s ease;   
+    }   
+}
+
+@include responsive(md){
+    .header-container{
+        padding: 0.5rem 1rem;
+    }
+    .logo{
+        height: 4rem;
+        width: 8rem;
+    }
+}

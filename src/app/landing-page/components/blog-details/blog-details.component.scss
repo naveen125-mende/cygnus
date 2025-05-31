@@ -1,0 +1,16 @@
+@use '../../../../partial-scss/variables' as *;
+@use '../../../../styles.scss';
+
+span{
+    cursor: pointer;
+    &:hover{
+        @extend .fifth-primaryheading;
+    }
+}
+
+.image-container{
+   height: 300px;
+   img{
+    height: 300px;
+   }
+}

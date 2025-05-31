@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ProductsData } from '../../../constants/products.contstants';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-products',
@@ -9,4 +10,15 @@ import { ProductsData } from '../../../constants/products.contstants';
 })
 export class ProductsComponent {
   products_details=ProductsData.Dashboard_Products;
+  
+
+  constructor (private router:Router){}
+  
+  selectedCategoryId: string = '';
+
+  selectCategory(id: string): void {
+    localStorage.setItem('selectedCategoryId',id);
+    this.router.navigate(['/products/products-list']);
+  }
+
 }
