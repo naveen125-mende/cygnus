@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsData } from '../../../constants/products.contstants';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-products-list',
@@ -9,14 +10,12 @@ import { Router } from '@angular/router';
   styleUrl: './products-list.component.scss'
 })
 export class ProductsListComponent implements OnInit{
+  constructor (private router:Router, private location:Location){}
   products = ProductsData.Products;
   productsList : any[]=[];
-  id: string | number | undefined;
-  
-  constructor (private router:Router){}
-  
+  id: string ='';
   selectedProductId: string = '';
-
+  
   selectProduct(id: string): void {
     localStorage.setItem('selectedProductId',id);
     this.router.navigate(['/products/product-details']);
@@ -28,6 +27,4 @@ export class ProductsListComponent implements OnInit{
     this.productsList = this.products[this.id as keyof typeof ProductsData.Products];
    }
   }
-
-
 }

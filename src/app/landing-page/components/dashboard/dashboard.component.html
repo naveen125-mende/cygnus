@@ -4,7 +4,7 @@
     </div>
     <div class="hero-second-container ">
         <div class="grid-3-1">
-            <div class="flex-column g-4">
+            <div class="flex-column g-3">
                 <h3 class="secondary-heading ">Welcome to Cygnus Aqua Technologies </h3>
                 <div class="transparent-card">
                     <h5 class="pb-3 thirdcol-secondary-heading">No. 1 in Alkaline water</h5>
@@ -19,8 +19,8 @@
     </div>
     <div class="container">
         <h3 class="secondary-heading text-center pb-4">Our Products </h3>
-        <div class="grid-4">
-            <div class="product-card flex col-gap" *ngFor="let item of products_details">
+        <div class="product-container">
+            <div class="product-card" *ngFor="let item of products_details">
                 <div class="product-image-container">
                     <img src="{{item.img}}" alt="">
                 </div>
@@ -35,7 +35,7 @@
         <h3 class="secondary-heading text-center pb-4">Our 5 Wings of Water Solutions</h3>
         <div class="flex-col-gap">
             <div class="first-grid w-100" [ngClass]="{ 'flex-reverse': item.id % 2 === 0 }"  *ngFor="let item of five_wings_solutions">
-                <div class="light-blue-card  flex-center w-100">
+                <div class="light-blue-card  flex-center ">
                     <img src="{{item.img}}" alt="">
                 </div>
                 <div class="flexcolumnjstcn-center w-100">

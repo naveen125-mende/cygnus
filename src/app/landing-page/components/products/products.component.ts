@@ -9,10 +9,9 @@ import { Router } from '@angular/router';
   styleUrl: './products.component.scss'
 })
 export class ProductsComponent {
-  products_details=ProductsData.Dashboard_Products;
-  
-
   constructor (private router:Router){}
+
+  products_details=ProductsData.Dashboard_Products;
   
   selectedCategoryId: string = '';
 

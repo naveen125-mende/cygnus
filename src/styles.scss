@@ -29,13 +29,15 @@ p{
   box-shadow: 0px 1px 2px 0px $primary-shadow-color;
 }
 .light-blue-card{
-  @include card($light-blue-color, 1px solid $border-color, 12px, 1rem);
+  @include card($light-blue-color, 1px solid $border-color, 12px,0);
   box-shadow: 0px 1px 2px 0px $primary-shadow-color;
   height: 300px;
+  width: $hundred-percent;
   img{
     max-width: $hundred-percent;
   }
 }
+
 .product-card{
   @include card($light-white, 1px solid $border-color, 4px, 0.5rem);
   box-shadow: 0px 1px 2px 0px $primary-shadow-color;
@@ -48,9 +50,13 @@ p{
     padding: 2rem;
     border-radius: 4px;
     @extend .flex-col-center;
+    perspective: 1000px;
+    transform: rotateY(0deg) rotateX(10deg) scale(1.05);
     img{
       max-width: $hundred-percent;
-    }
+      transform-style: preserve-3d;
+      animation: spin3d 5s linear infinite;
+    };
   }
   .flexcolumn-spacebtwn{
     text-align: center;
@@ -61,6 +67,17 @@ p{
     button{
       @extend .primary-border-button;
     }
+  }
+}
+@keyframes spin3d {
+  0% {
+    transform: rotateY(0deg);
+  }
+  10% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(180deg);
   }
 }
 
@@ -369,6 +386,9 @@ white-space: nowrap !important;
     p{
     @include text(1.125rem,400,$white-color);
     }
+  }
+  .product-card{
+    min-width: 15rem;
   }
 }
 @include responsive(md){
